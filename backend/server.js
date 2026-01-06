@@ -22,6 +22,14 @@ app.use(cors());
 // Enable Express to parse JSON in request bodies
 app.use(express.json());
 
+app.get('/api/health', (req, res) => {
+  res.status(200).json({
+    status: 'OK',
+    message: 'Backend is running successfully 🚀',
+    timestamp: new Date().toISOString()
+  });
+});
+
 // --- Database Connection ---
 const connectDB = async () => {
   try {
