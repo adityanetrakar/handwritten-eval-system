@@ -275,7 +275,7 @@ const convertPdfToImages = async (pdfPath) => {
       .map(f => path.join(tempSavePath, f)); // Get their full paths
 
     if (imageFiles.length === 0) {
-      throw new Error('ImageMagick ran, but no images were created.');
+      throw new Error('ImageMagick ran, but no images is getting created.');
     }
 
     console.log(`PDF converted to ${imageFiles.length} images.`);
